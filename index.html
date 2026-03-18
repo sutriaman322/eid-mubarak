@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selamat Hari Raya Idul Fitri - Mohon Maaf Lahir dan Batin</title>
+    <title>Selamat Hari Raya Idul Fitri</title>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -15,248 +15,10 @@
         body {
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
-            background: #1a1a2e;
-        }
-
-        /* Background Image Container */
-        .background-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), 
-                        url('foto-keluarga.jpg') center/cover no-repeat;
-            /* Ganti 'foto-keluarga.jpg' dengan foto keluarga Anda */
-        }
-
-        /* Overlay Pattern */
-        .islamic-pattern {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
-            opacity: 0.6;
-        }
-
-        /* Main Container */
-        .container {
+            background: linear-gradient(135deg, #1e5f3f 0%, #1a1a2e 100%);
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            position: relative;
         }
 
-        /* Decorative Corners */
-        .corner {
-            position: fixed;
-            width: 200px;
-            height: 200px;
-            z-index: 1;
-        }
-
-        .corner-top-left {
-            top: 0;
-            left: 0;
-            border-top: 5px solid #d4af37;
-            border-left: 5px solid #d4af37;
-            border-radius: 0 0 50px 0;
-        }
-
-        .corner-top-right {
-            top: 0;
-            right: 0;
-            border-top: 5px solid #d4af37;
-            border-right: 5px solid #d4af37;
-            border-radius: 0 0 0 50px;
-        }
-
-        .corner-bottom-left {
-            bottom: 0;
-            left: 0;
-            border-bottom: 5px solid #d4af37;
-            border-left: 5px solid #d4af37;
-            border-radius: 0 50px 0 0;
-        }
-
-        .corner-bottom-right {
-            bottom: 0;
-            right: 0;
-            border-bottom: 5px solid #d4af37;
-            border-right: 5px solid #d4af37;
-            border-radius: 50px 0 0 0;
-        }
-
-        /* Main Greeting Card */
-        .greeting-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 30px;
-            padding: 60px 40px;
-            max-width: 800px;
-            width: 100%;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 
-                        0 0 0 3px rgba(212, 175, 55, 0.5),
-                        inset 0 0 60px rgba(212, 175, 55, 0.1);
-            text-align: center;
-            position: relative;
-            animation: fadeInUp 1.5s ease-out;
-            margin: 20px;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Crescent and Star */
-        .crescent-star {
-            font-size: 80px;
-            color: #d4af37;
-            margin-bottom: 20px;
-            animation: rotate 10s linear infinite;
-            display: inline-block;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        /* Eid Mubarak Text - Indonesian */
-        .eid-mubarak {
-            font-family: 'Great Vibes', cursive;
-            font-size: 4rem;
-            background: linear-gradient(135deg, #d4af37 0%, #f4e5c2 50%, #d4af37 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin: 15px 0;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
-            animation: glow 2s ease-in-out infinite alternate;
-            line-height: 1.3;
-        }
-
-        @keyframes glow {
-            from {
-                filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
-            }
-            to {
-                filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.8));
-            }
-        }
-
-        .sub-greeting {
-            font-size: 1.5rem;
-            color: #1e5f3f;
-            font-weight: 600;
-            margin: 10px 0 25px;
-        }
-
-        /* Arabic Text */
-        .arabic-text {
-            font-family: 'Amiri', serif;
-            font-size: 2.5rem;
-            color: #1e5f3f;
-            margin: 20px 0;
-            direction: rtl;
-        }
-
-        /* Message in Indonesian */
-        .message {
-            font-size: 1.1rem;
-            color: #333;
-            line-height: 1.8;
-            margin: 30px 0;
-            padding: 20px;
-            border-top: 2px solid #d4af37;
-            border-bottom: 2px solid #d4af37;
-        }
-
-        .message p {
-            margin: 10px 0;
-        }
-
-        .message strong {
-            color: #1e5f3f;
-        }
-
-        /* Decorative Elements */
-        .lantern {
-            font-size: 60px;
-            margin: 20px;
-            display: inline-block;
-            animation: swing 3s ease-in-out infinite;
-        }
-
-        @keyframes swing {
-            0%, 100% { transform: rotate(-5deg); }
-            50% { transform: rotate(5deg); }
-        }
-
-        /* Ketupat Decoration */
-        .ketupat {
-            font-size: 50px;
-            margin: 0 10px;
-            display: inline-block;
-            animation: bounce 2s ease-in-out infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        /* Music Control */
-        .music-control {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: linear-gradient(135deg, #d4af37, #f4e5c2);
-            border: none;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            cursor: pointer;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-
-        .music-control:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.6);
-        }
-
-        .music-control.playing {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
-            50% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
-        }
-
-        /* Stars Animation */
         .stars {
             position: fixed;
             top: 0;
@@ -270,7 +32,6 @@
         .star {
             position: absolute;
             color: #d4af37;
-            font-size: 20px;
             animation: twinkle 3s ease-in-out infinite;
         }
 
@@ -279,252 +40,183 @@
             50% { opacity: 1; transform: scale(1.2); }
         }
 
-        /* Family Photo Section */
-        .family-section {
-            margin-top: 40px;
-            padding: 30px;
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(30, 95, 63, 0.1));
-            border-radius: 20px;
-            border: 2px solid #d4af37;
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
         }
 
-        .family-photo {
+        .greeting-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 50px 40px;
+            max-width: 800px;
             width: 100%;
-            max-width: 400px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 15px;
-            border: 5px solid #d4af37;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 3px rgba(212, 175, 55, 0.3);
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
         }
 
-        /* Indonesian Cultural Elements */
-        .cultural-note {
-            font-size: 0.95rem;
-            color: #666;
-            font-style: italic;
-            margin-top: 15px;
-            padding: 10px;
-            background: rgba(212, 175, 55, 0.1);
-            border-radius: 10px;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        /* Responsive Design */
+        .crescent {
+            font-size: 70px;
+            margin-bottom: 20px;
+            animation: rotate 20s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .eid-mubarak {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            background: linear-gradient(135deg, #d4af37, #f4e5c2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 15px 0;
+            line-height: 1.2;
+        }
+
+        .sub-greeting {
+            font-size: 1.4rem;
+            color: #1e5f3f;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .arabic-text {
+            font-family: 'Amiri', serif;
+            font-size: 2.2rem;
+            color: #1e5f3f;
+            margin: 15px 0;
+        }
+
+        .message {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.8;
+            margin: 25px 0;
+            padding: 20px;
+            border-top: 2px solid #d4af37;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        .decorations {
+            font-size: 50px;
+            margin: 20px 0;
+        }
+
+        .music-control {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #d4af37, #f4e5c2);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            font-size: 24px;
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+
+        .music-control:hover {
+            transform: scale(1.1);
+        }
+
         @media (max-width: 768px) {
             .eid-mubarak {
                 font-size: 2.5rem;
             }
-            
-            .sub-greeting {
-                font-size: 1.2rem;
-            }
-            
             .arabic-text {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
-            
             .greeting-card {
-                padding: 40px 20px;
+                padding: 35px 25px;
             }
-            
-            .corner {
-                width: 100px;
-                height: 100px;
-            }
-            
-            .lantern, .ketupat {
-                font-size: 40px;
-            }
-        }
-
-        /* Loading Animation */
-        .loading {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #1a1a2e;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-
-        .loading.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loading-text {
-            font-family: 'Great Vibes', cursive;
-            font-size: 2.5rem;
-            color: #d4af37;
-            text-align: center;
-            animation: fadeInOut 2s infinite;
-        }
-
-        .loading-subtext {
-            font-size: 1rem;
-            color: #f4e5c2;
-            margin-top: 10px;
-        }
-
-        @keyframes fadeInOut {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 1; }
-        }
-
-        /* Opacity for better text readability */
-        .greeting-card p {
-            opacity: 0.95;
         }
     </style>
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading" id="loading">
-        <div>
-            <div class="loading-text">Selamat Hari Raya</div>
-            <div class="loading-subtext">Idul Fitri 1447 H</div>
-        </div>
-    </div>
-
-    <!-- Background Elements -->
-    <div class="background-container"></div>
-    <div class="islamic-pattern"></div>
-    
-    <!-- Animated Stars -->
     <div class="stars" id="stars"></div>
 
-    <!-- Decorative Corners -->
-    <div class="corner corner-top-left"></div>
-    <div class="corner corner-top-right"></div>
-    <div class="corner corner-bottom-left"></div>
-    <div class="corner corner-bottom-right"></div>
-
-    <!-- Main Container -->
     <div class="container">
         <div class="greeting-card">
-            <!-- Crescent and Star -->
-            <div class="crescent-star">☪️</div>
+            <div class="crescent">☪️</div>
             
-            <!-- Indonesian Eid Greeting -->
             <h1 class="eid-mubarak">Selamat Hari Raya<br>Idul Fitri</h1>
             <div class="sub-greeting">Mohon Maaf Lahir dan Batin 🙏</div>
             
-            <!-- Arabic Greeting -->
             <div class="arabic-text">تقبل الله منا ومنكم</div>
-            <div style="color: #666; font-size: 0.9rem; margin-bottom: 15px;">
-                Taqabbalallahu minna wa minkum
-            </div>
+            <div style="color: #666; margin-bottom: 15px;">Taqabbalallahu minna wa minkum</div>
             
-            <!-- Decorative Elements: Lanterns & Ketupat -->
-            <div>
-                <span class="ketupat">🍙</span>
-                <span class="lantern">🏮</span>
-                <span class="ketupat">🍙</span>
-                <span class="lantern">🕌</span>
-                <span class="ketupat">🍙</span>
-            </div>
+            <div class="decorations">🏮  🏮</div>
             
-            <!-- Greeting Message in Indonesian -->
             <div class="message">
                 <p><strong>Di hari yang fitri ini, mari kita bersihkan hati dan saling memaafkan.</strong></p>
-                <p>Semoga Allah SWT menerima semua amal ibadah kita, mengampuni dosa-dosa kita, dan mempertemukan kita kembali dengan Ramadan tahun depan dalam keadaan sehat dan penuh berkah.</p>
-                <p style="margin-top: 15px;">
-                    🌙 <em>"Minal Aidin wal Faizin"</em> 🌙
-                </p>
-                <p style="font-size: 0.9rem; color: #666;">
-                    Semoga kita termasuk orang-orang yang kembali kepada kesucian dan meraih kemenangan.
+                <p>Semoga Allah SWT menerima semua amal ibadah kita dan mengampuni dosa-dosa kita.</p>
+                <p style="margin-top: 15px; color: #1e5f3f; font-style: italic;">
+                    🌙 Minal Aidin wal Faizin 🌙
                 </p>
             </div>
             
-            <!-- Family Photo Section -->
-            <div class="family-section">
-                <h3 style="font-family: 'Great Vibes', cursive; font-size: 2rem; color: #d4af37; margin-bottom: 20px;">
-                    Dengan Penuh Kasih dari Keluarga Kami
-                </h3>
-                <!-- Ganti dengan foto keluarga Anda -->
-                <img src="foto-keluarga.jpg" alt="Keluarga Kami" class="family-photo" onerror="this.src='https://via.placeholder.com/400x300/d4af37/ffffff?text=Foto+Keluarga'">
-                <p class="cultural-note">
-                    🍽️ <em>Silaturahmi adalah kunci keberkahan. Mari kunjungi kerabat dan berbagi kebahagiaan.</em>
-                </p>
-            </div>
-            
-            <!-- Additional Indonesian Blessing -->
-            <div style="margin-top: 30px; padding: 20px; background: rgba(30, 95, 63, 0.1); border-radius: 15px;">
-                <p style="font-family: 'Amiri', serif; font-size: 1.3rem; color: #1e5f3f; margin-bottom: 10px;">
+            <div style="padding: 15px; background: rgba(212, 175, 55, 0.1); border-radius: 10px; margin-top: 20px;">
+                <p style="font-family: 'Amiri', serif; font-size: 1.3rem; color: #1e5f3f;">
                     بارك الله فيكم
                 </p>
-                <p style="color: #333;">
-                    <strong>Barakallahu fiikum</strong><br>
-                    Semoga Allah memberkahi Anda dan keluarga
-                </p>
+                <p style="font-size: 0.9rem; color: #666;">Barakallahu Fiikum</p>
             </div>
         </div>
     </div>
 
-    <!-- Music Control Button -->
     <button class="music-control" id="musicBtn" onclick="toggleMusic()" title="Putar Musik">
         🎵
     </button>
 
-    <!-- Background Music -->
-    <!-- Ganti 'musik-islami.mp3' dengan file musik Anda -->
-    <!-- Sumber musik Islami gratis: -->
-    <!-- - Pixabay.com/music/search/islamic/ -->
-    <!-- - FreeSound.org -->
-    <!-- - YouTube Audio Library -->
     <audio id="backgroundMusic" loop>
         <source src="musik-islami.mp3" type="audio/mpeg">
-        <source src="https://example.com/nasheed-instrumental.mp3" type="audio/mpeg">
-        Browser Anda tidak mendukung elemen audio.
     </audio>
 
     <script>
-        // Remove loading screen
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.getElementById('loading').classList.add('hidden');
-            }, 2000);
-        });
-
-        // Music Control
-        const music = document.getElementById('backgroundMusic');
-        const musicBtn = document.getElementById('musicBtn');
-        let isPlaying = false;
-
-        function toggleMusic() {
-            if (isPlaying) {
-                music.pause();
-                musicBtn.innerHTML = '🎵';
-                musicBtn.classList.remove('playing');
-                musicBtn.title = 'Putar Musik';
-            } else {
-                music.play().catch(error => {
-                    console.log('Autoplay dicegah. Diperlukan interaksi pengguna.');
-                    alert('Klik di mana saja pada halaman untuk mengaktifkan musik');
-                });
-                musicBtn.innerHTML = '🔇';
-                musicBtn.classList.add('playing');
-                musicBtn.title = 'Hentikan Musik';
+        // Hide loading dan langsung tampilkan konten
+        function hideLoading() {
+            const loading = document.getElementById('loading');
+            if (loading) {
+                loading.style.display = 'none';
             }
-            isPlaying = !isPlaying;
         }
 
-        // Enable music on first click anywhere
-        document.addEventListener('click', function() {
-            if (!isPlaying && music.readyState >= 2) {
-                toggleMusic();
-            }
-        }, { once: true });
+        // Execute immediately
+        if (document.readyState === 'complete') {
+            hideLoading();
+        } else {
+            window.addEventListener('load', hideLoading);
+            setTimeout(hideLoading, 1000);
+        }
 
-        // Create animated stars
+        // Create stars
         function createStars() {
             const starsContainer = document.getElementById('stars');
-            const starSymbols = ['⭐', '✨', '💫', '🌟'];
+            const starSymbols = ['⭐', '✨', '💫'];
             
             for (let i = 0; i < 25; i++) {
                 const star = document.createElement('div');
@@ -540,46 +232,27 @@
 
         createStars();
 
-        // Parallax effect
-        document.addEventListener('mousemove', function(e) {
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
+        // Music control
+        let isPlaying = false;
+        function toggleMusic() {
+            const music = document.getElementById('backgroundMusic');
+            const musicBtn = document.getElementById('musicBtn');
             
-            const background = document.querySelector('.background-container');
-            background.style.transform = `translate(${mouseX * 10}px, ${mouseY * 10}px)`;
-        });
-
-        // Rotating greetings in Indonesian
-        const greetings = [
-            "Selamat Idul Fitri",
-            "Mohon Maaf Lahir Batin",
-            "Minal Aidin wal Faizin",
-            "Taqabbalallahu Minna Wa Minkum"
-        ];
-        
-        let greetingIndex = 0;
-        const mainGreeting = document.querySelector('.eid-mubarak');
-        
-        setInterval(() => {
-            greetingIndex = (greetingIndex + 1) % greetings.length;
-            mainGreeting.innerHTML = greetings[greetingIndex].replace(' ', '<br>');
-        }, 8000);
-
-        // Add subtle animation to family photo on hover
-        const familyPhoto = document.querySelector('.family-photo');
-        if (familyPhoto) {
-            familyPhoto.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(1.02)';
-                this.style.transition = 'transform 0.3s ease';
-            });
-            familyPhoto.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1)';
-            });
+            if (!music) return;
+            
+            if (isPlaying) {
+                music.pause();
+                musicBtn.innerHTML = '🎵';
+            } else {
+                music.play().catch(e => {
+                    alert('Klik tombol sekali lagi untuk memutar musik');
+                });
+                musicBtn.innerHTML = '🔇';
+            }
+            isPlaying = !isPlaying;
         }
 
-        // Console welcome message
-        console.log('🌙 Selamat Hari Raya Idul Fitri! 🌙');
-        console.log('Semoga website ini membawa kebahagiaan untuk keluarga Anda.');
+        console.log('✅ Website loaded! Selamat Idul Fitri! 🌙');
     </script>
 </body>
 </html>
